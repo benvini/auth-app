@@ -7,15 +7,15 @@ import {loadTheme} from './src/shared/theme/theme';
 declare const global: {HermesInternal: null | {}};
 
 const CustomView = styled.View`
-  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   flex: 1;
   background-color: ${({theme}) => theme.palette.backgroundColor};
 `;
 
 const CustomText = styled.Text`
-  display: flex;
-  flex: 1;
-  background-color: ${({theme}) => theme.palette.textColor};
+  color: ${({theme}) => theme.palette.textColor};
 `;
 
 const App: FunctionComponent = () => {
@@ -26,15 +26,22 @@ const App: FunctionComponent = () => {
   const colorScheme = useColorScheme();
   const theme = loadTheme(colorScheme || 'light');
 
-  console.log(colorScheme);
   return (
     <>
-      <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
+      <ThemeProvider theme={theme}>
+        <StatusBar barStyle="dark-content" />
+        {/* <SafeAreaView> */}
         <CustomView>
           <CustomText>Ahikam</CustomText>
+          <CustomText>Ahikam</CustomText>
+          <CustomText>Ahikam</CustomText>
+          <CustomText>Ahikam</CustomText>
+          <CustomText>Ahikam</CustomText>
+          <CustomText>Ahikam</CustomText>
+          <CustomText>Ahikam</CustomText>
         </CustomView>
-      </SafeAreaView>
+        {/* </SafeAreaView> */}
+      </ThemeProvider>
     </>
   );
 };
