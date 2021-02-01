@@ -1,5 +1,5 @@
 import React, {useEffect, FunctionComponent} from 'react';
-import {SafeAreaView, StatusBar, useColorScheme} from 'react-native';
+import {StatusBar, useColorScheme} from 'react-native';
 import SplashScreen from 'react-native-splash-screen';
 import styled, {ThemeProvider} from 'styled-components/native';
 import {loadTheme} from './src/shared/theme/theme';
@@ -27,22 +27,18 @@ const App: FunctionComponent = () => {
   const theme = loadTheme(colorScheme || 'light');
 
   return (
-    <>
-      <ThemeProvider theme={theme}>
-        <StatusBar barStyle="dark-content" />
-        {/* <SafeAreaView> */}
-        <CustomView>
-          <CustomText>Ahikam</CustomText>
-          <CustomText>Ahikam</CustomText>
-          <CustomText>Ahikam</CustomText>
-          <CustomText>Ahikam</CustomText>
-          <CustomText>Ahikam</CustomText>
-          <CustomText>Ahikam</CustomText>
-          <CustomText>Ahikam</CustomText>
-        </CustomView>
-        {/* </SafeAreaView> */}
-      </ThemeProvider>
-    </>
+    <ThemeProvider theme={theme}>
+      <StatusBar barStyle="dark-content" />
+      <CustomView>
+        <CustomText>Ahikam</CustomText>
+        <CustomText>Ahikam</CustomText>
+        <CustomText>Ahikam</CustomText>
+        <CustomText>Ahikam</CustomText>
+        <CustomText>Ahikam</CustomText>
+        <CustomText>Ahikam</CustomText>
+        <CustomText>Ahikam</CustomText>
+      </CustomView>
+    </ThemeProvider>
   );
 };
 
