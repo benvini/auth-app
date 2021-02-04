@@ -1,9 +1,9 @@
 import React, {FunctionComponent} from 'react';
 import {StatusBar, useColorScheme} from 'react-native';
 import {ThemeProvider} from 'styled-components/native';
-import {loadTheme} from './src/shared/theme/theme';
 import {NavigationContainer} from '@react-navigation/native';
-import InitalizationScreen from './src/screens/InitalizationScreen';
+import {loadTheme} from '~/shared/theme/theme';
+import InitalizationScreen from '~/screens/InitalizationScreen';
 
 declare const global: {HermesInternal: null | {}};
 
