@@ -1,43 +1,24 @@
-import React, {useEffect, FunctionComponent} from 'react';
+import React, {FunctionComponent} from 'react';
 import {StatusBar, useColorScheme} from 'react-native';
-import SplashScreen from 'react-native-splash-screen';
-import styled, {ThemeProvider} from 'styled-components/native';
+import {ThemeProvider} from 'styled-components/native';
 import {loadTheme} from './src/shared/theme/theme';
+import {NavigationContainer} from '@react-navigation/native';
+import InitalizationScreen from './src/screens/InitalizationScreen';
 
 declare const global: {HermesInternal: null | {}};
 
-const CustomView = styled.View`
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  background-color: ${({theme}) => theme.palette.backgroundColor};
-`;
-
-const CustomText = styled.Text`
-  color: ${({theme}) => theme.palette.textColor};
-`;
+// Whats the difference between FC and FunctionComponent
 
 const App: FunctionComponent = () => {
-  useEffect(() => {
-    SplashScreen.hide();
-  }, []);
-
   const colorScheme = useColorScheme();
   const theme = loadTheme(colorScheme || 'light');
 
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar barStyle="dark-content" />
-      <CustomView>
-        <CustomText>Ahikam</CustomText>
-        <CustomText>Ahikam</CustomText>
-        <CustomText>Ahikam</CustomText>
-        <CustomText>Ahikam</CustomText>
-        <CustomText>Ahikam</CustomText>
-        <CustomText>Ahikam</CustomText>
-        <CustomText>Ahikam</CustomText>
-      </CustomView>
+      <NavigationContainer>
+        <StatusBar barStyle="dark-content" />
+        <InitalizationScreen />
+      </NavigationContainer>
     </ThemeProvider>
   );
 };
