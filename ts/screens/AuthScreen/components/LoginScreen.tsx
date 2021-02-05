@@ -1,6 +1,10 @@
 import React, {FunctionComponent} from 'react';
 import styled from 'styled-components/native';
 
+declare const global: {HermesInternal: null | {}};
+
+// Whats the difference between FC and FunctionComponent
+
 const CustomView = styled.View`
   flex-direction: column;
   justify-content: center;
@@ -16,13 +20,13 @@ const CustomText = styled.Text`
 const MainScreen: FunctionComponent = () => {
   return (
     <CustomView>
-      <CustomText>Ragouan</CustomText>
-      <CustomText>Ragouan</CustomText>
-      <CustomText>Ragouan</CustomText>
-      <CustomText>Ragouan</CustomText>
-      <CustomText>Ragouan</CustomText>
-      <CustomText>Ragouan</CustomText>
-      <CustomText>Ragouan</CustomText>
+      <CustomText>Login</CustomText>
+      <CustomText>Login</CustomText>
+      <CustomText>Login</CustomText>
+      <CustomText>Login</CustomText>
+      <CustomText>Login</CustomText>
+      <CustomText>Login</CustomText>
+      <CustomText>Login</CustomText>
     </CustomView>
   );
 };

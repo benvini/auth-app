@@ -1,8 +1,5 @@
-import React, {useEffect, FunctionComponent} from 'react';
+import React, {FunctionComponent} from 'react';
 import styled from 'styled-components/native';
-import {StackNavigationProp} from '@react-navigation/stack';
-import {RootStack} from '../../../shared/utils/routes';
-import SplashScreen from 'react-native-splash-screen';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -20,23 +17,7 @@ const CustomText = styled.Text`
   color: ${({theme}) => theme.palette.textColor};
 `;
 
-const delay = (t = 10) => {
-  return new Promise((resolve) => setTimeout(resolve, t));
-};
-
-type IProps1 = {
-  navigation: StackNavigationProp<RootStack>;
-};
-
-const InitalizationScreen: FunctionComponent<IProps1> = ({navigation: {navigate}}) => {
-  useEffect(() => {
-    (async () => {
-      await delay(5000);
-      navigate('Main');
-      SplashScreen.hide();
-    })();
-  }, [navigate]);
-
+const MainScreen: FunctionComponent = () => {
   return (
     <CustomView>
       <CustomText>Ahikam</CustomText>
@@ -50,4 +31,4 @@ const InitalizationScreen: FunctionComponent<IProps1> = ({navigation: {navigate}
   );
 };
 
-export default InitalizationScreen;
+export default MainScreen;
