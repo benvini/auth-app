@@ -19,7 +19,6 @@ const App: FunctionComponent = () => {
 
   useEffect(() => {
     (async () => {
-      // await delay(3000);
       setIsLoading(false);
       SplashScreen.hide();
     })();
