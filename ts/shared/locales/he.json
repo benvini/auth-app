@@ -2,7 +2,8 @@
     "common": {
       "ol": ".{{index}}"
     },
-    "welcomePage" : {
-        "message": "אחיקם"
+    "loginScreen" : {
+        "userName": "שם משתמש:",
+        "password": "סיסמא:"
     }
 }

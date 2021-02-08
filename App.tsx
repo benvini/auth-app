@@ -5,29 +5,29 @@ import {NavigationContainer} from '@react-navigation/native';
 import {loadTheme} from '~/shared/theme';
 import SplashScreen from 'react-native-splash-screen';
 import {MainScreen, AuthScreen} from '~/screens';
+import {loadLocale} from '~/shared/utils/locale';
+import {getLocales} from 'react-native-localize';
 
-declare const global: {HermesInternal: null | {}};
+// declare const global: {HermesInternal: null | {}};
 
-// Whats the difference between FC and FunctionComponent
+// toDo: Whats the difference between FC and FunctionComponent
 
-const testArray = ['1', '2', '3'];
-
-loadLocale('en');
-
-//initalizationPage vs ReduxMiddleWare
 const App: FunctionComponent = () => {
-  const [isLoading, setIsLoading] = useState(true);
-  //will go to redux
+  //toDo: will go to redux
   const [isToken, setIsToken] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const colorScheme = useColorScheme();
-  const theme = loadTheme(colorScheme || 'light');
+
+  const [{languageCode, isRTL}] = getLocales();
+  const theme = loadTheme(colorScheme || 'light', isRTL);
 
   useEffect(() => {
     (async () => {
+      loadLocale(languageCode);
       setIsLoading(false);
       SplashScreen.hide();
     })();
-  }, []);
+  }, [languageCode]);
 
   if (isLoading) {
     return null;
@@ -36,7 +36,7 @@ const App: FunctionComponent = () => {
   return (
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-        <StatusBar barStyle="dark-content" />
+        <StatusBar barStyle="default" />
         {isToken ? <MainScreen /> : <AuthScreen />}
       </NavigationContainer>
     </ThemeProvider>

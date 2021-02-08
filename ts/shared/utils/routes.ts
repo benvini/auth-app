@@ -1,4 +1,3 @@
-// add a type
 export type Auth = {
   Login: undefined;
   Signup: undefined;

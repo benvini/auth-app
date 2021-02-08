@@ -2,7 +2,8 @@
     "common": {
       "ol": "{{index}}."
     },
-    "welcomePage" : {
-        "message": " Ahikam"
-    }
+    "loginScreen" : {
+      "userName": "Username:",
+      "password": "Password:"
+  }
 }
