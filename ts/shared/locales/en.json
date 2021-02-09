@@ -1,0 +1,9 @@
+{
+    "common": {
+      "ol": "{{index}}."
+    },
+    "loginScreen" : {
+      "userName": "Username:",
+      "password": "Password:"
+  }
+}

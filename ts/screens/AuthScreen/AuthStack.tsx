@@ -6,8 +6,8 @@ import {SignupScreen} from './components';
 
 const Stack = createStackNavigator<Auth>();
 
-//How to use StackNavigationOptions
-//How to use HeaderModeType
+//toDo: How to use StackNavigationOptions
+//toDo: How to use HeaderModeType
 
 const AuthStack: FunctionComponent = () => {
   return (

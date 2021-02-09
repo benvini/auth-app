@@ -1,34 +1,16 @@
 import React, {FunctionComponent} from 'react';
-import styled from 'styled-components/native';
+import {useTranslation} from 'react-i18next';
+import {Screen, Typography} from '~/shared/components';
 
-declare const global: {HermesInternal: null | {}};
+const LoginScreen: FunctionComponent = () => {
+  const {t} = useTranslation('loginScreen');
 
-// Whats the difference between FC and FunctionComponent
-
-const CustomView = styled.View`
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1;
-  background-color: ${({theme}) => theme.palette.backgroundColor};
-`;
-
-const CustomText = styled.Text`
-  color: ${({theme}) => theme.palette.textColor};
-`;
-
-const MainScreen: FunctionComponent = () => {
   return (
-    <CustomView>
-      <CustomText>Login</CustomText>
-      <CustomText>Login</CustomText>
-      <CustomText>Login</CustomText>
-      <CustomText>Login</CustomText>
-      <CustomText>Login</CustomText>
-      <CustomText>Login</CustomText>
-      <CustomText>Login</CustomText>
-    </CustomView>
+    <Screen>
+      <Typography>{t('userName')}</Typography>
+      <Typography>{t('password')}</Typography>
+    </Screen>
   );
 };
 
-export default MainScreen;
+export default LoginScreen;

@@ -1,0 +1,9 @@
+{
+    "common": {
+      "ol": ".{{index}}"
+    },
+    "loginScreen" : {
+        "userName": "שם משתמש:",
+        "password": "סיסמא:"
+    }
+}

@@ -1,4 +1,4 @@
-import {Platform, I18nManager} from 'react-native';
+import {Platform} from 'react-native';
 import light from './light';
 import dark from './dark';
 
@@ -15,9 +15,7 @@ export type Theme = {
 
 const isIOS = Platform.OS === 'ios';
 
-const isRTL = I18nManager.isRTL;
-
-export const loadTheme = (colorSchema: string): Theme => ({
+export const loadTheme = (colorSchema: String, isRTL: Boolean): Theme => ({
   isIOS,
   isRTL,
   palette: colorSchema === 'light' ? light : dark,
