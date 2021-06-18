@@ -1,9 +1,21 @@
 {
-    "common": {
-      "ol": "{{index}}."
-    },
-    "loginScreen" : {
-      "userName": "Username:",
-      "password": "Password:"
+  "loginScreen": {
+    "email": "Email:",
+    "password": "Password:",
+    "login": "LOGIN",
+    "unableLogin": "Unable to login.",
+    "title": "Login Page"
+  },
+  "infoScreen": {
+    "avatar": "Avatar",
+    "joinedAt": "Joined At",
+    "team": "Team",
+    "name": "Name",
+    "score": "Score",
+    "duration": "Duration",
+    "bugs": "Bugs",
+    "deadline": "Deadline",
+    "title": "Info Page",
+    "unableFetchData": "Unable Fetch Data."
   }
 }
