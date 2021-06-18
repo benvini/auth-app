@@ -1,9 +1,21 @@
 {
-    "common": {
-      "ol": ".{{index}}"
-    },
-    "loginScreen" : {
-        "userName": "שם משתמש:",
-        "password": "סיסמא:"
-    }
+  "loginScreen": {
+    "email": "אימייל:",
+    "password": "סיסמא:",
+    "login": "התחבר",
+    "unableLogin": "לא ניתן להתחבר",
+    "title": "עמוד התחברות"
+  },
+  "infoScreen": {
+    "avatar": "אווטר",
+    "joinedAt": "הצטרף בשעה",
+    "team": "קבוצה",
+    "name": "שם",
+    "score": "תוצאה",
+    "duration": "אורך בימים",
+    "bugs": "באגים",
+    "deadline": "מועד אחרון",
+    "title": "עמוד המידע",
+    "unableFetchData": "לא ניתן לטעון את המידע."
+  }
 }

@@ -5,6 +5,8 @@ import dark from './dark';
 export type Palette = {
   textColor: string;
   backgroundColor: string;
+  primary: string;
+  secondary: string;
 };
 
 export type Theme = {
